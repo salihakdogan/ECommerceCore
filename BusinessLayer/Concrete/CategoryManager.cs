@@ -4,12 +4,13 @@ using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class CategoryManager : IGenericService<Category>
+    public class CategoryManager : ICategoryService
     {
         ICategoryDal _categoryDal;
 
@@ -30,7 +31,7 @@ namespace BusinessLayer.Concrete
 
         public List<Category> TGetList()
         {
-            return new List<Category>();
+            return _categoryDal.GetList();
         }
 
         public void TInsert(Category t)
