@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ECommerceCore.ViewComponents.CustomerPage
+namespace ECommerceCore.ViewComponents.CustomerPage.HomePage
 {
     public class HpBlogSection : ViewComponent
     {

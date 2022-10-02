@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ECommerceCore.ViewComponents.CustomerPage
+namespace ECommerceCore.ViewComponents.CustomerPage.HomePage
 {
-    public class CplHeaderArea : ViewComponent
+    public class HpBannerSection2 : ViewComponent
     {
         public IViewComponentResult Invoke()
         {

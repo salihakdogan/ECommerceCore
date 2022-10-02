@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ECommerceCore.ViewComponents.CustomerPage
+namespace ECommerceCore.ViewComponents.CustomerPage.CustomerPageLayout
 {
-    public class CplFooterArea : ViewComponent
+    public class CplMiniCartArea : ViewComponent
     {
         public IViewComponentResult Invoke()
         {

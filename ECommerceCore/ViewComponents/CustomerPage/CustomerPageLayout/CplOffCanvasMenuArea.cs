@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ECommerceCore.ViewComponents.CustomerPage
+namespace ECommerceCore.ViewComponents.CustomerPage.CustomerPageLayout
 {
-    public class HpShippingSection : ViewComponent
+    public class CplOffCanvasMenuArea : ViewComponent
     {
         public IViewComponentResult Invoke()
         {

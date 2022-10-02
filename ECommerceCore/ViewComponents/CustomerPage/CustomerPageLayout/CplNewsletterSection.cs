@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ECommerceCore.ViewComponents.CustomerPage
+namespace ECommerceCore.ViewComponents.CustomerPage.CustomerPageLayout
 {
-    public class HpInstagramSection : ViewComponent
+    public class CplNewsletterSection : ViewComponent
     {
         public IViewComponentResult Invoke()
         {
