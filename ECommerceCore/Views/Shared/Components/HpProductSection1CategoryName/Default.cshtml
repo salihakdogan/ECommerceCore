@@ -1,0 +1,11 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Category>
+
+@foreach (var item in Model)
+{
+    <li>
+        <a data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1"
+       aria-selected="false">
+            @item.CtgName
+        </a>
+    </li>
+}

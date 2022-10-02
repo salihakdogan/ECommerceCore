@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_CustomerPageLayout.cshtml";
 }
 
-    <!--slider area start-->
+    @*<!--slider area start-->
     @await Component.InvokeAsync("HpSliderArea")
     <!--slider area end-->
 
@@ -14,13 +14,15 @@
 
     <!-- banner section start -->
     @await Component.InvokeAsync("HpBannerSection1")
-    <!-- banner section end -->
+    <!-- banner section end -->*@
 
+    <div style="margin-top:300px;">
     <!-- product section start -->
     @await Component.InvokeAsync("HpProductSection1")
     <!-- product section end -->
+    </div>
 
-    <!-- banner section start -->
+    @*<!-- banner section start -->
     @await Component.InvokeAsync("HpBannerSection2")
     <!-- banner section end -->
 
@@ -34,4 +36,4 @@
 
     <!-- instagram section start -->
     @await Component.InvokeAsync("HpInstagramSection")
-    <!-- instagram section end -->
+    <!-- instagram section end -->*@
