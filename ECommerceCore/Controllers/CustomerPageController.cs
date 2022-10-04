@@ -14,6 +14,7 @@ namespace ECommerceCore.Controllers
 
         public IActionResult ProductDetails(int id)
         {
+            ViewBag.productname = id;
             var values = pmanager.TGetListByID(id);
             return View(values);
         }
