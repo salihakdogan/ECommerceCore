@@ -18,6 +18,11 @@ namespace BusinessLayer.Concrete
             _productDal = productDal;
         }
 
+        public List<Product> TGetListByID(int id)
+        {
+            return _productDal.GetListByID(x => x.ProductID == id);
+        }
+
         public void TDelete(Product t)
         {
             _productDal.Delete(t);
