@@ -18,5 +18,15 @@ namespace ECommerceCore.Controllers
             var values = pmanager.TGetListByID(id);
             return View(values);
         }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        public IActionResult Register()
+        {
+            return View();
+        }
     }
 }
