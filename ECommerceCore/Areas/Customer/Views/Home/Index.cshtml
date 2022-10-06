@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = " ";
+    Layout = "~/Areas/Customer/Views/Shared/_Layout.cshtml";
+}
+
+    @*<!--slider area start-->
+    @await Component.InvokeAsync("HomeSliderArea")
+    <!--slider area end-->
+
+    <!--shipping section start-->
+    @await Component.InvokeAsync("HomeShippingSection")
+    <!--shipping section end-->
+
+    <!-- banner section start -->
+    @await Component.InvokeAsync("HomeBannerSection1")
+    <!-- banner section end -->*@
+
+    <div style="margin-top:300px;">
+    <!-- product section start -->
+    @await Component.InvokeAsync("HomeProductSection1")
+    <!-- product section end -->
+    </div>
+
+    @*<!-- banner section start -->
+    @await Component.InvokeAsync("HomeBannerSection2")
+    <!-- banner section end -->
+
+    <!-- product section start -->
+    @await Component.InvokeAsync("HomeProductSection2")
+    <!-- product section end -->
+
+    <!-- blog section start -->
+    @await Component.InvokeAsync("HomeBlogSection")
+    <!-- blog section end -->
+
+    <!-- instagram section start -->
+    @await Component.InvokeAsync("HomeInstagramSection")
+    <!-- instagram section end -->*@
