@@ -4,6 +4,7 @@
     Layout = "~/Areas/Customer/Views/Shared/_Layout.cshtml";
 }
 
+<link rel="stylesheet" href="~/customer/assets/css/customstyle.css">
 <!--breadcrumbs area start-->
 <div class="breadcrumbs_area breadcrumbs_other" style="margin-top:120px;">
     <div class="container">
@@ -21,34 +22,34 @@
     </div>
 </div>
 <!--breadcrumbs area end-->
-<!--Checkout page section-->
+<!--register page section-->
 <div class="checkout_section" id="accordion">
     <div class="container">
 
-        <div class="checkout_form">
+        <form method="post">
+            <div class="checkout_form">
 
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-3">
-                    <div class="checkout_form_input">
-                        <label> Name   <span>*</span></label>
-                        <input type="text">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <div class="checkout_form_input">
+                            <label> Name   <span>*</span></label>
+                            <input type="text">
+                        </div>
                     </div>
+
+                    <div class="col-md-3">
+                        <div class="checkout_form_input">
+                            <label> Last name   <span>*</span></label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
                 </div>
 
-                <div class="col-md-3">
-                    <div class="checkout_form_input">
-                        <label> Last name   <span>*</span></label>
-                        <input type="text">
-                    </div>
-                </div>
-                <div class="col-md-3"></div>
-            </div>
+                <div class="row">
 
-            <div class="row">
-
-                <div class="col-md-6" style="margin-left:auto ; margin-right:auto ;">
-                    <form action="#">
+                    <div class="col-md-6" style="margin-left:auto ; margin-right:auto ;">
 
                         <div class="checkout_form_input">
                             <label> Email Address   <span>*</span></label>
@@ -57,35 +58,36 @@
 
                         <div class="checkout_form_input">
                             <label> Password   <span>*</span></label>
-                            <input type="password" id="passwordbox" />
-
-                        </div>
-
-                        <div>
-                            <a id="showpass" onclick="passfunction()" style="float:right; color:#5b6c5a; opacity: 0.4;">Show password <i class="fa fa-light fa-eye"></i></a>
+                            <div class="input-container">
+                                <input type="password" id="passwordbox"/>
+                                <a id="showpass" onclick="passfunction()" class="margin-for-button"><i class="fa fa-light fa-eye"></i></a>
+                            </div>
                         </div>
 
                         <div class="checkout_form_input">
                             <label> Verify password   <span>*</span></label>
-                            <input type="password" id="passwordbox2" />
-
-                        </div>
+                            <div class="input-container">
+                                <input type="password" id="passwordbox2" />
+                                <a id="showpass2" onclick="passfunction2()" class="margin-for-button"><i class="fa fa-light fa-eye"></i></a>
+                            </div>
+                        </div>           
 
                         <div>
-                            <a id="showpass2" onclick="passfunction2()" style="float:right; color:#5b6c5a; opacity: 0.4; margin-bottom: 10px;">Show verify password <i class="fa fa-light fa-eye"></i></a>
+                            <input id="approve" runat="server" name="checkbox" type="checkbox" style="margin-bottom: 15px;" /><label style="opacity:0.3;"> I confirm to join e-mail newsletter. </label>
+                            <label style="opacity:0.2; margin-bottom:15px; font-size:12px;"> (Your account information will not be shared with anyone.) </label>
                         </div>
 
                         <div class="checkout_form_input">
                             <div class="shopping_continue_btn">
-                                <button class="btn btn-primary btn-block" type="submit">Register</button>
+                                <button class="btn btn-primary btn-block">Register</button>
                             </div>
                         </div>
 
-                    </form>
+                    </div>
                 </div>
 
             </div>
-        </div>
+        </form>
 
         <div class="row" style="margin-top:50px;">
             <div class="col-md-6" style="margin-left:auto ; margin-right:auto ;">
@@ -106,10 +108,10 @@
 
         if (x.type === "password") {
             x.type = "text";
-            y.innerHTML = "Hide password <i class='fa fa-light fa-eye-slash'></i>";
+            y.innerHTML = "<i class='fa fa-light fa-eye-slash'></i>";
         } else {
             x.type = "password";
-            y.innerHTML = "Show password <i class='fa fa-light fa-eye'></i>";
+            y.innerHTML = "<i class='fa fa-light fa-eye'></i>";
         }
     }
 </script>
@@ -121,12 +123,11 @@
 
         if (x.type === "password") {
             x.type = "text";
-            y.innerHTML = "Hide verify password <i class='fa fa-light fa-eye-slash'></i>";
+            y.innerHTML = "<i class='fa fa-light fa-eye-slash'></i>";
         } else {
             x.type = "password";
-            y.innerHTML = "Show verify password <i class='fa fa-light fa-eye'></i>";
+            y.innerHTML = "<i class='fa fa-light fa-eye'></i>";
         }
     }
 </script>
-
-<!--Checkout page section end-->
+<!--register page section end-->

@@ -1,0 +1,22 @@
+﻿.input-container {
+    display: flex;
+    width: auto;
+    border: 1px solid #cccccc;
+    justify-content: space-between;
+}
+
+input-container input:focus, .input-container input:active {
+    outline: none;
+}
+
+.input-container input {
+    border: none;
+}
+
+.margin-for-button {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    color: #5b6c5a;
+    opacity: 0.4;
+}
