@@ -1,4 +1,4 @@
-﻿
+﻿@model UserLoginViewModel
 @{
     ViewData["Title"] = " ";
     Layout = "~/Areas/Customer/Views/Shared/_Layout.cshtml";
@@ -34,7 +34,8 @@
 
                         <div class="checkout_form_input">
                             <label> Email Address   <span>*</span></label>
-                            <input type="text" name="UserName">
+                            <input type="text" name="Email">
+                            <span asp-validation-for="Email" style="opacity:0.4; color:#DF2222;"></span>
                             
                         </div>
 
@@ -45,18 +46,21 @@
                             
                             <a id="showpass" onclick="passfunction()" class="margin-for-button"><i class="fa fa-light fa-eye"></i></a>
                             </div>
+                            <span asp-validation-for="Password" style="opacity:0.4; color:#DF2222;"></span>
                         </div>
 
                         <div>
                             <input id="rememberme" name="checkbox" type="checkbox" style="margin-bottom: 15px;" /><label style="opacity:0.3;"> Remember me </label>
                         </div>
 
+                        <div asp-validation-summary="ModelOnly" style="opacity:0.4; color:#DF2222; margin-bottom:15px;"></div>
+
                         <div class="checkout_form_input">
                             <div class="shopping_continue_btn">
                                 <button class="btn btn-primary btn-block">Login</button>
                             </div>
                         </div>
-              
+             
                     </form>
                 </div>
 
