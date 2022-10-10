@@ -11,5 +11,10 @@ namespace ECommerceCore.Areas.Customer.Controllers
         {
             return View();
         }
+
+        public IActionResult Account()
+        {
+            return View();
+        }
     }
 }
